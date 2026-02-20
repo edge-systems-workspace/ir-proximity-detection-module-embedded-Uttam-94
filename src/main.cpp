@@ -13,3 +13,8 @@
 int trigpin = 9;
 int echopin = 10;
 
+void setup() {
+    pinMode(trigpin, OUTPUT);
+    pinMode(echopin, INPUT);
+    Serial.begin(9600);
+}
