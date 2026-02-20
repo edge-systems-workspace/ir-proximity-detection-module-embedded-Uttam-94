@@ -18,3 +18,17 @@ void setup() {
     pinMode(echopin, INPUT);
     Serial.begin(9600);
 }
+
+void loop() {
+    digitalWrite(trigpin, LOW);
+    delayMicroseconds(2);
+    digitalWrite(trigpin, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(trigpin, LOW);
+    long duration = pulseIn(echopin, HIGH);
+    long distance = duration*0.0343/2;
+    Serial.print("Distance: ");
+    Serial.print(distance);
+    Serial.println(" cm");
+    delay(500);
+}
