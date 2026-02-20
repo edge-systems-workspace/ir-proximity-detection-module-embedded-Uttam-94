@@ -10,3 +10,6 @@
  * and detects obstacle presence.
  */
 
+int trigpin = 9;
+int echopin = 10;
+
